@@ -7,7 +7,7 @@
       <meta name="description" content="Real Estate Html Template">
       <meta name="author" content="">
       <meta name="generator" content="Jekyll v4.1.1">
-      <title>Virgo Mansions - Welcome to Virgo Mansions - Best Property Resellers & Rentals</title>
+      <title>Dashboard - Virgo Mansions</title>
       <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
       <link rel="stylesheet" href="{{ asset('web/vendors/fontawesome-pro-5/css/all.css')}}">
       <link rel="stylesheet" href="{{ asset('web/vendors/bootstrap-select/css/bootstrap-select.min.css')}}">
@@ -24,12 +24,11 @@
       <meta name="twitter:card" content="summary">
       <meta name="twitter:site" content="@">
       <meta name="twitter:creator" content="@">
-      <meta name="twitter:title" content="Home 03">
-      <meta name="twitter:description" content="Real Estate Showcase">
+      <meta name="twitter:title" content="Dashboard">
+      <meta name="twitter:description" content="Real Estate Html Template">
       <meta name="twitter:image" content="images/homeid-social-logo.png">
-      <meta property="og:url" content="home-03.html">
-      <meta property="og:title" content="Home 03">
-      <meta property="og:description" content="Real Estate Html Showcase">
+      <meta property="og:title" content="Dashboard">
+      <meta property="og:description" content="Real Estate Html Template">
       <meta property="og:type" content="website">
       <meta property="og:image" content="images/homeid-social.png">
       <meta property="og:image:type" content="image/png">
@@ -37,142 +36,195 @@
       <meta property="og:image:height" content="630">
    </head>
    <body>
-      <header class="main-header position-absolute fixed-top m-0 navbar-dark header-sticky header-sticky-smart header-mobile-xl header-02">
-         <div class="sticky-area">
-            <div class="container container-xxl">
-               <nav class="navbar navbar-expand-xl bg-transparent px-0 w-100">
-                  <a class="navbar-brand order-0 order-xl-1 mx-xl-auto" href="{{route('welcome')}}">
-                  <img src="{{asset('logo-f.png')}}" alt="HomeID" class="normal-logo">
-                  <img src="{{asset('logo.png')}}" alt="HomeID" style="height: 50px;" class="sticky-logo">
-                  </a>
-                  <div class="d-flex d-xl-none order-2">
-                     
-                     <button class="navbar-toggler border-0 pr-0" type="button" data-toggle="collapse" data-target="#primaryMenu03" aria-controls="primaryMenu03" aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="text-white fs-24"><i class="fal fa-bars"></i></span>
-                     </button>
-                  </div>
-                  <div class="collapse navbar-collapse order-3 order-xl-0 mt-3 mt-xl-0 mr-auto flex-grow-0" id="primaryMenu03">
-                     <ul class="navbar-nav hover-menu main-menu px-0 mx-xl-n4">
-                        <li id="navbar-item-home" aria-haspopup="true" class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                           <a class="nav-link  p-0" href="{{route('welcome')}}" >
-                           Buy
-                           </a>
-                        </li>
-                        <li id="navbar-item-home" aria-haspopup="true" class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                            <a class="nav-link  p-0" href="{{route('rent')}}" >
-                            Rent
-                            </a>
-                        </li>
-                        <li id="navbar-item-home" aria-haspopup="true" class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                            <a class="nav-link  p-0" href="{{ route('property.add') }}" >
-                            Sell
-                            </a>
-                        </li>
-                     </ul>
-                     <div class="d-block d-xl-none">
-                        <ul class="navbar-nav flex-row ml-auto align-items-center justify-content-lg-end flex-wrap py-2">            
-                           <li class="nav-item ">
-                              @if(Auth::check())
-                              <a class="nav-link pl-3 pr-2" href="{{ route('home') }}">DASHBOARD</a>
-                              
-                              @else
-                              <a class="nav-link pl-3 pr-2" href="{{ route('login') }}">SIGN IN</a>
-                              @endif
+      <div class="wrapper dashboard-wrapper">
+         <div class="d-flex flex-wrap flex-xl-nowrap">
+            <div class="db-sidebar bg-white">
+               <nav class="navbar navbar-expand-xl navbar-light d-block px-0 header-sticky dashboard-nav py-0">
+                  <div class="sticky-area shadow-xs-1 py-3">
+                     <div class="d-flex px-3 px-xl-6 w-100">
+                        <a class="navbar-brand" href="{{ route('welcome') }}">
+                        <img src="{{ asset('logo.png')}}" >
+                        </a>
+                        <div class="ml-auto d-flex align-items-center ">
+                           <div class="d-flex align-items-center d-xl-none">
+                              <div class="dropdown px-3">
+                                 <a href="#" class="dropdown-toggle d-flex align-items-center text-heading" data-toggle="dropdown">
+                                    <div class="w-48px">
+                                       <img src="{{ asset('avatar.png')}}" alt="Ronald Hunter" class="rounded-circle">
+                                    </div>
+                                    <span class="fs-13 font-weight-500 d-none d-sm-inline ml-2">
+                                    {{Auth::user()->name}}
+                                    </span>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">My Profile</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
+                                 </div>
+                              </div>
+                              <div class="dropdown no-caret py-4 px-3 d-flex align-items-center notice mr-3">
+                                 <a href="#" class="dropdown-toggle text-heading fs-20 font-weight-500 lh-1" data-toggle="dropdown">
+                                 <i class="far fa-bell"></i>
+                                 <span class="badge badge-primary badge-circle badge-absolute font-weight-bold fs-13">1</span>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-right">
+                                    
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="navbar-toggler border-0 px-0" type="button" data-toggle="collapse" data-target="#primaryMenuSidebar" aria-controls="primaryMenuSidebar" aria-expanded="false" aria-label="Toggle navigation">
+                           <span class="navbar-toggler-icon"></span>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="collapse navbar-collapse bg-white" id="primaryMenuSidebar">
+                        
+                        <ul class="list-group list-group-flush w-100">
+                           <li class="list-group-item pt-6 pb-4">
+                              <h5 class="fs-13 letter-spacing-087 text-muted mb-3 text-uppercase px-3">Main</h5>
+                              <ul class="list-group list-group-no-border rounded-lg">
+                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="{{route('home')}}" class="text-heading lh-1 sidebar-link">
+                                    <span class="sidebar-item-icon d-inline-block mr-3 fs-20"><i class="fal fa-cog"></i></span>
+                                    <span class="sidebar-item-text">Dashboard</span>
+                                    </a>
+                                 </li>
+                              </ul>
                            </li>
-                           
+                           <li class="list-group-item pt-6 pb-4">
+                              <h5 class="fs-13 letter-spacing-087 text-muted mb-3 text-uppercase px-3">Manage Listings</h5>
+                              <ul class="list-group list-group-no-border rounded-lg">
+                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="{{ route('property.add') }}" class="text-heading lh-1 sidebar-link">
+                                       <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20 fs-20">
+                                          <svg class="icon icon-add-new">
+                                             <use xlink:href="#icon-add-new"></use>
+                                          </svg>
+                                       </span>
+                                       <span class="sidebar-item-text">Add Property</span>
+                                    </a>
+                                 </li>
+                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="{{ route('property') }}" class="text-heading lh-1 sidebar-link d-flex align-items-center">
+                                       <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
+                                          <svg class="icon icon-my-properties">
+                                             <use xlink:href="#icon-my-properties"></use>
+                                          </svg>
+                                       </span>
+                                       <span class="sidebar-item-text">My Properties</span>
+                                    </a>
+                                 </li>
+                                 {{-- <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="dashboard-my-favorites.html" class="text-heading lh-1 sidebar-link d-flex align-items-center">
+                                       <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
+                                          <svg class="icon icon-heart">
+                                             <use xlink:href="#icon-heart"></use>
+                                          </svg>
+                                       </span>
+                                       <span class="sidebar-item-text">My Favorites</span>
+                                       <span class="sidebar-item-number ml-auto text-primary fs-15 font-weight-bold">5</span>
+                                    </a>
+                                 </li>
+                                 
+                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="dashboard-reviews.html" class="text-heading lh-1 sidebar-link d-flex align-items-center">
+                                       <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
+                                          <svg class="icon icon-review">
+                                             <use xlink:href="#icon-review"></use>
+                                          </svg>
+                                       </span>
+                                       <span class="sidebar-item-text">Reviews</span>
+                                       <span class="sidebar-item-number ml-auto text-primary fs-15 font-weight-bold">29</span>
+                                    </a>
+                                 </li> --}}
+                              </ul>
+                           </li>
+                           <li class="list-group-item pt-6 pb-4">
+                              <h5 class="fs-13 letter-spacing-087 text-muted mb-3 text-uppercase px-3">Manage Acount</h5>
+                              <ul class="list-group list-group-no-border rounded-lg">
+                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="#" class="text-heading lh-1 sidebar-link d-flex align-items-center">
+                                       <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
+                                          <svg class="icon icon-my-package">
+                                             <use xlink:href="#icon-my-package"></use>
+                                          </svg>
+                                       </span>
+                                       <span class="sidebar-item-text">My Package</span>
+                                       <span class="sidebar-item-number ml-auto text-primary fs-15 font-weight-bold">5</span>
+                                    </a>
+                                 </li>
+                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="#" class="text-heading lh-1 sidebar-link">
+                                       <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
+                                          <svg class="icon icon-my-profile">
+                                             <use xlink:href="#icon-my-profile"></use>
+                                          </svg>
+                                       </span>
+                                       <span class="sidebar-item-text">My Profile</span>
+                                    </a>
+                                 </li>
+                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="{{ route('logout') }}" class="text-heading lh-1 sidebar-link">
+                                       <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
+                                          <svg class="icon icon-log-out">
+                                             <use xlink:href="#icon-log-out"></use>
+                                          </svg>
+                                       </span>
+                                       <span class="sidebar-item-text">Log Out</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
                         </ul>
                      </div>
                   </div>
-                  <div class="ml-auto d-none d-xl-block order-xl-2">
-                     <ul class="navbar-nav flex-row ml-auto align-items-center justify-content-lg-end flex-wrap py-2">
-                        <li class="nav-item ">
-                           @if(Auth::check())
-                              <a class="nav-link pl-3 pr-2" href="{{ route('home') }}">DASHBOARD</a>
-                           @else
-                              <a class="nav-link pl-3 pr-2" href="{{ route('login') }}">SIGN IN</a>
-                           @endif
-                        </li>
-                        
-                     </ul>
-                  </div>
                </nav>
             </div>
-         </div>
-      </header>
-        @yield('contents')
-      <footer class="bg-dark pt-10 pb-8 footer">
-         <div class="container">
-          
-            <div class="text-center text-white fs-22 lh-2 font-weight-500 mxw-751 mb-4">
-               Everything you need to know when looking at different types of homes for sale all in one place.
+            <div class="page-content">
+               <header class="main-header shadow-none shadow-lg-xs-1 bg-white position-relative d-none d-xl-block">
+                  <div class="container-fluid">
+                     <nav class="navbar navbar-light py-0 row no-gutters px-3 px-lg-0">
+                        <div class="col-md-4 px-0 px-md-6 order-1 order-md-0">
+                           
+                        </div>
+                        <div class="col-md-6 d-flex flex-wrap justify-content-md-end order-0 order-md-1">
+                           <div class="dropdown border-md-right border-0 py-3 text-right">
+                              <a href="#" class="dropdown-toggle text-heading pr-3 pr-sm-6 d-flex align-items-center justify-content-end" data-toggle="dropdown">
+                                 <div class="mr-4 w-48px">
+                                    <img src="{{ asset('avatar.png')}}" alt="Ronald Hunter" class="rounded-circle">
+                                 </div>
+                                 <div class="fs-13 font-weight-500 lh-1">
+                                    {{Auth::user()->name}}
+                                 </div>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right w-100">
+                                 <a class="dropdown-item" href="dashboard-my-profiles.html">My Profile</a>
+                                 <a class="dropdown-item" href="#">Logout</a>
+                              </div>
+                           </div>
+                            
+                        </div>
+                     </nav>
+                  </div>
+               </header>
+               @yield('contents')
             </div>
-            <ul class="list-inline text-center mb-5">
-               <li class="list-inline-item mr-8 mb-3">
-                  <a href="#"><img src="{{asset('web/images/footer-logo-01.png')}}" alt="Footer Logo 01"> </a>
-               </li>
-               <li class="list-inline-item mr-8 mb-3">
-                  <a href="#"><img src="{{asset('web/images/footer-logo-02.png')}}" alt="Footer Logo 02"> </a>
-               </li>
-               <li class="list-inline-item mr-8 mb-3">
-                  <a href="#"><img src="{{asset('web/images/footer-logo-03.png')}}" alt="Footer Logo 03"> </a>
-               </li>
-               <li class="list-inline-item">
-                  <a href="#"><img src="{{asset('web/images/footer-logo-04.png')}}" alt="Footer Logo 04"> </a>
-               </li>
-            </ul>
-            <ul class="list-inline text-center mb-6">
-               <li class="list-inline-item mr-3 text-white opacity-7">
-                  © {{date('Y')}} Virgo Mansions. All Rights Reserved
-               </li>
-               <li class="list-inline-item divider mr-3"></li>
-               <li class="list-inline-item mr-3">
-                  <a href="tel:(+00)123567990" class="text-white font-weight-bold fs-15">(+00) 123 567990</a>
-               </li>
-               <li class="list-inline-item divider mr-3"></li>
-               <li class="list-inline-item">
-                  <a href="mailto:contact@homeid.com" class="text-white opacity-7 hover-white">contact@virgomansions.com</a>
-               </li>
-            </ul>
-            {{-- <ul class="list-inline text-center mb-2">
-               <li class="list-inline-item mr-0">
-                  <a href="#" class="text-white opacity-5 fs-18 px-4 hover-primary opacity-hover-10"><i class="fab fa-twitter"></i></a>
-               </li>
-               <li class="list-inline-item mr-0">
-                  <a href="#" class="text-white opacity-5 fs-18 px-4 hover-primary opacity-hover-10"><i class="fab fa-facebook-f"></i></a>
-               </li>
-               <li class="list-inline-item mr-0">
-                  <a href="#" class="text-white opacity-5 fs-18 px-4 hover-primary opacity-hover-10">
-                  <i class="fab fa-instagram"></i>
-                  </a>
-               </li>
-               <li class="list-inline-item mr-0">
-                  <a href="#" class="text-white opacity-5 fs-18 px-4 hover-primary opacity-hover-10">
-                  <i class="fab fa-pinterest"></i>
-                  </a>
-               </li>
-               <li class="list-inline-item mr-0">
-                  <a href="#" class="text-white opacity-5 fs-18 px-4 hover-primary opacity-hover-10">
-                  <i class="fab fa-youtube"></i>
-                  </a>
-               </li>
-            </ul> --}}
          </div>
-      </footer>
-      <script src="{{asset('web/vendors/jquery.min.js')}}"></script>
-      <script src="{{asset('web/vendors/jquery-ui/jquery-ui.min.js')}}"></script>
-      <script src="{{asset('web/vendors/bootstrap/bootstrap.bundle.js')}}"></script>
-      <script src="{{asset('web/vendors/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
-      <script src="{{asset('web/vendors/slick/slick.min.js')}}"></script>
-      <script src="{{asset('web/vendors/waypoints/jquery.waypoints.min.js')}}"></script>
-      <script src="{{asset('web/vendors/counter/countUp.js')}}"></script>
-      <script src="{{asset('web/vendors/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
-      <script src="{{asset('web/vendors/chartjs/Chart.min.js')}}"></script>
-      <script src="{{asset('web/vendors/dropzone/js/dropzone.min.js')}}"></script>
-      <script src="{{asset('web/vendors/timepicker/bootstrap-timepicker.min.js')}}"></script>
-      <script src="{{asset('web/vendors/hc-sticky/hc-sticky.min.js')}}"></script>
-      <script src="{{asset('web/vendors/jparallax/TweenMax.min.js')}}"></script>
-      <script src="{{asset('web/vendors/mapbox-gl/mapbox-gl.js')}}"></script>
-      <script src="{{asset('web/js/theme.js')}}"></script>
+      </div>
+      <script src="{{ asset('web/vendors/jquery.min.js')}}"></script>
+      <script src="{{ asset('web/vendors/jquery-ui/jquery-ui.min.js')}}"></script>
+      <script src="{{ asset('web/vendors/bootstrap/bootstrap.bundle.js')}}"></script>
+      <script src="{{ asset('web/vendors/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
+      <script src="{{ asset('web/vendors/slick/slick.min.js')}}"></script>
+      <script src="{{ asset('web/vendors/waypoints/jquery.waypoints.min.js')}}"></script>
+      <script src="{{ asset('web/vendors/counter/countUp.js')}}"></script>
+      <script src="{{ asset('web/vendors/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+      <script src="{{ asset('web/vendors/chartjs/Chart.min.js')}}"></script>
+      <script src="{{ asset('web/vendors/dropzone/js/dropzone.min.js')}}"></script>
+      <script src="{{ asset('web/vendors/timepicker/bootstrap-timepicker.min.js')}}"></script>
+      <script src="{{ asset('web/vendors/hc-sticky/hc-sticky.min.js')}}"></script>
+      <script src="{{ asset('web/vendors/jparallax/TweenMax.min.js')}}"></script>
+      <script src="{{ asset('web/vendors/mapbox-gl/mapbox-gl.js')}}"></script>
+      <script src="{{ asset('web/js/theme.js')}}"></script>
       
       <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
          <defs>
@@ -393,8 +445,5 @@
             </symbol>
          </defs>
       </svg>
-      <div class="position-fixed pos-fixed-bottom-right p-6 z-index-10">
-         <a href="#" class="gtf-back-to-top bg-white text-primary hover-white bg-hover-primary shadow p-0 w-52px h-52 rounded-circle fs-20 d-flex align-items-center justify-content-center" title="Back To Top"><i class="fal fa-arrow-up"></i></a>
-      </div>
    </body>
 </html>

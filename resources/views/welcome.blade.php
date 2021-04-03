@@ -1150,7 +1150,7 @@
             <span class="heading-divider mx-auto"></span>
             <div class="row info-box-3 mt-7 no-gutters mx-auto">
                <div class="col-md-3 col-sm-6 mb-6 mb-md-0" data-animate="zoomIn">
-                  <a href="listing-with-left-sidebar.html" class="card border-0 align-items-center justify-content-center pb-5 pt-7 px-0 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none hover-change-image">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pb-5 pt-7 px-0 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none hover-change-image">
                      <div class="card-img-top d-flex align-items-center justify-content-center border-md-right rounded-0">
                         <div class=" position-relative">
                            <img src="{{asset('web/images/verified.png')}}" class="hover-image position-absolute pos-fixed-top" alt="Apartment">
@@ -1163,7 +1163,7 @@
                   </a>
                </div>
                <div class="col-md-3 col-sm-6 mb-6 mb-md-0" data-animate="zoomIn">
-                  <a href="listing-with-left-sidebar.html" class="card border-0 align-items-center justify-content-center pb-5 pt-7 px-0 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none hover-change-image">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pb-5 pt-7 px-0 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none hover-change-image">
                      <div class="card-img-top d-flex align-items-center justify-content-center border-md-right rounded-0">
                         <div class=" position-relative">
                            <img src="{{asset('web/images/sofa.png')}}" class="hover-image position-absolute pos-fixed-top" alt="House">
@@ -1176,7 +1176,7 @@
                   </a>
                </div>
                <div class="col-md-3 col-sm-6 mb-6 mb-md-0" data-animate="zoomIn">
-                  <a href="listing-with-left-sidebar.html" class="card border-0 align-items-center justify-content-center pb-5 pt-7 px-0 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none hover-change-image">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pb-5 pt-7 px-0 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none hover-change-image">
                      <div class="card-img-top d-flex align-items-center justify-content-center border-md-right rounded-0">
                         <div class=" position-relative">
                            <img src="{{asset('web/images/architecture-and-city.png')}}" class="hover-image position-absolute pos-fixed-top" alt="Office">
@@ -1189,7 +1189,7 @@
                   </a>
                </div>
                <div class="col-md-3 col-sm-6 mb-6 mb-md-0" data-animate="zoomIn">
-                  <a href="listing-with-left-sidebar.html" class="card border-0 align-items-center justify-content-center pb-5 pt-7 px-0 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none hover-change-image">
+                  <a href="#" class="card border-0 align-items-center justify-content-center pb-5 pt-7 px-0 shadow-hover-3 bg-transparent bg-hover-white text-decoration-none hover-change-image">
                      <div class="card-img-top d-flex align-items-center justify-content-center  rounded-0">
                         <div class=" position-relative">
                            <img src="{{asset('web/images/eco-house.png')}}" class="hover-image position-absolute pos-fixed-top" alt="Villa">

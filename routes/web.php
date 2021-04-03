@@ -17,6 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('/listing/rent', 'IndexController@rent')->name('rent');
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/logout', 'HomeController@logout')->name('logout');
+    Route::get('/properties', 'PropertyController@index')->name('property');
+    Route::get('/properties/add', 'PropertyController@add')->name('property.add');
+    Route::post('/properties/add', 'PropertyController@addSubmit')->name('property.add');
+});
+
