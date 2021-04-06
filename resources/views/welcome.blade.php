@@ -33,7 +33,7 @@
          </div>
       </div>
    </section>
-   <section class="pt-lg-12 pt-11 pb-11">
+   {{-- <section class="pt-lg-12 pt-11 pb-11">
       <div class="container container-xxl">
          <div class="row flex-lg-row flex-cloumn">
             <div class="col-lg-5 col-xxl-6">
@@ -512,7 +512,7 @@
             </a>
          </div>
       </div>
-   </section>
+   </section> --}}
    <section class="bg-gray-02 pt-10 pb-11">
       <div class="container container-xxl">
          <h2 class="text-dark lh-1625 text-center">Why Choose Us?</h2>
@@ -525,9 +525,9 @@
                   </div>
                   <div class="card-body px-0 px-xxl-10 pt-7 pb-0 text-center">
                      <h4 class="card-title fs-18 lh-17 text-dark mb-2">Wider range of properties</h4>
-                     <p class="card-text px-sm-2">
+                     {{-- <p class="card-text px-sm-2">
                         Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscorem ipsum dolor sit ametcipsum suscorein ipsumg elit.
-                     </p>
+                     </p> --}}
                   </div>
                </div>
             </div>
@@ -538,9 +538,9 @@
                   </div>
                   <div class="card-body px-0 px-xxl-10 pt-7 pb-0 text-center">
                      <h4 class="card-title fs-18 lh-17 text-dark mb-2">Financing made easy</h4>
-                     <p class="card-text px-sm-2">
+                     {{-- <p class="card-text px-sm-2">
                         Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscorem ipsum dolor sit ametcipsum suscorein ipsumg elit.
-                     </p>
+                     </p> --}}
                   </div>
                </div>
             </div>
@@ -551,16 +551,16 @@
                   </div>
                   <div class="card-body px-0 px-xxl-10 pt-7 pb-0 text-center">
                      <h4 class="card-title fs-18 lh-17 text-dark mb-2">Transparentcy</h4>
-                     <p class="card-text px-sm-2">
+                     {{-- <p class="card-text px-sm-2">
                         Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscorem ipsum dolor sit ametcipsum suscorein ipsumg elit.
-                     </p>
+                     </p> --}}
                   </div>
                </div>
             </div>
          </div>
       </div>
    </section>
-   <section class="py-lg-12 my-lg-1 py-11">
+   {{-- <section class="py-lg-12 my-lg-1 py-11">
       <div class="container container-xxl">
          <div class="row">
             <div class="col-md-6">
@@ -874,8 +874,8 @@
             </div>
          </div>
       </div>
-   </section>
-   <section class="pb-lg-13 pb-11">
+   </section> --}}
+   {{-- <section class="pb-lg-13 pb-11">
       <div class="container container-xxl">
          <div class="row">
             <div class="col-md-6">
@@ -1139,7 +1139,7 @@
             </div>
          </div>
       </div>
-   </section>
+   </section> --}}
    <section>
       <div class="bg-patten-01 pt-12 pb-10 bg-secondary">
          <div class="container">
@@ -1206,7 +1206,7 @@
       </div>
    </section>
   
-   <section class="bg-gray-02 pt-9 pb-lg-13 pb-11">
+   {{-- <section class="bg-gray-02 pt-9 pb-lg-13 pb-11">
       <div class="container container-xxl">
          <h2 class="text-heading">Destinations We Love The Most</h2>
          <span class="heading-divider"></span>
@@ -1258,7 +1258,7 @@
             </div>
          </div>
       </div>
-   </section>
+   </section> --}}
   
 </main>
 @endsection

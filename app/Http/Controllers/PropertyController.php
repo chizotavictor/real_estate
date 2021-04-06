@@ -65,8 +65,15 @@ class PropertyController extends Controller
 
         try {
             $data['user_id'] = auth()->user()->id;
+            
+            if(auth()->user()->is_admin == 1) {
+                $data['status'] =  "Approved";
+                $request->session()->flash('success', "Property added successfully.");
+            } else {
+                $request->session()->flash('success', "Property added successfully. Please your property is currently on pending - Our compliance team are currently supervising it.");
+            }
             $created = Property::create($data);
-            $request->session()->flash('success', "Property added successfully. Please your property is currently on pending - Our compliance team are currently supervising it.");
+            
         } catch(\Exception $e) {
             $request->session()->flash('error', "Error occurred while adding property. Please contact support!");
         }

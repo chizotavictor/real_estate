@@ -18,6 +18,9 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/listing/rent', 'IndexController@rent')->name('rent');
+Route::get('/listing', 'IndexController@buy')->name('buy');
+Route::get('/listing/{id}', 'IndexController@description')->name('description');
+Route::post('/interest', 'IndexController@interest')->name('interest');
 
 Auth::routes();
 

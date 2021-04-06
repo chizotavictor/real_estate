@@ -7,9 +7,9 @@
              <ol class="breadcrumb pt-6 pt-lg-2 lh-15 pb-5">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item">Listing</li>
-                <li class="breadcrumb-item active" aria-current="page">Rent</li>
+                <li class="breadcrumb-item active" aria-current="page">Buy</li>
              </ol>
-             <h1 class="fs-30 lh-1 mb-0 text-heading font-weight-600">Renting Propertise</h1>
+             <h1 class="fs-30 lh-1 mb-0 text-heading font-weight-600">Open for Purchase</h1>
           </nav>
        </div>
     </section>
@@ -67,7 +67,7 @@
                           <img src="{{asset('public/uploads/'. $p->image_1)}}" class="card-img" alt="Home in Metric Way">
                           <div class="card-img-overlay p-2">
                              <ul class="list-inline mb-0 d-flex justify-content-center align-items-center h-100 hover-image">
-                                {{-- <li class="list-inline-item">
+                                <li class="list-inline-item">
                                    <a href="#" class="w-40px h-40 border rounded-circle d-inline-flex align-items-center justify-content-center text-heading bg-white border-white bg-hover-primary border-hover-primary hover-white">
                                    <i class="far fa-heart"></i>
                                    </a>
@@ -76,7 +76,7 @@
                                    <a href="#" class="w-40px h-40 border rounded-circle d-inline-flex align-items-center justify-content-center text-heading bg-white border-white bg-hover-primary border-hover-primary hover-white">
                                    <i class="fas fa-exchange-alt"></i>
                                    </a>
-                                </li> --}}
+                                </li>
                              </ul>
                           </div>
                          </div>

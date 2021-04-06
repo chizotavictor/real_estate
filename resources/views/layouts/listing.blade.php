@@ -54,7 +54,7 @@
                 <div class="collapse navbar-collapse mt-3 mt-lg-0 mx-auto flex-grow-0" id="primaryMenu01">
                     <ul class="navbar-nav hover-menu main-menu px-0 mx-lg-n4">
                         <li id="navbar-item-home" aria-haspopup="true" class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                            <a class="nav-link  p-0" href="{{route('welcome')}}" >
+                            <a class="nav-link  p-0" href="{{route('buy')}}" >
                             Buy
                             </a>
                         </li>

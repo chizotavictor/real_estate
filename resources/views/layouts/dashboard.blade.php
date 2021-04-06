@@ -57,7 +57,7 @@
                                     </span>
                                  </a>
                                  <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="#">My Profile</a>
+                                    {{-- <a class="dropdown-item" href="#">My Profile</a> --}}
                                     <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
                                  </div>
                               </div>
@@ -141,7 +141,7 @@
                            <li class="list-group-item pt-6 pb-4">
                               <h5 class="fs-13 letter-spacing-087 text-muted mb-3 text-uppercase px-3">Manage Acount</h5>
                               <ul class="list-group list-group-no-border rounded-lg">
-                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                 {{-- <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
                                     <a href="#" class="text-heading lh-1 sidebar-link d-flex align-items-center">
                                        <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
                                           <svg class="icon icon-my-package">
@@ -151,8 +151,8 @@
                                        <span class="sidebar-item-text">My Package</span>
                                        <span class="sidebar-item-number ml-auto text-primary fs-15 font-weight-bold">5</span>
                                     </a>
-                                 </li>
-                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                 </li> --}}
+                                 {{-- <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
                                     <a href="#" class="text-heading lh-1 sidebar-link">
                                        <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
                                           <svg class="icon icon-my-profile">
@@ -161,7 +161,7 @@
                                        </span>
                                        <span class="sidebar-item-text">My Profile</span>
                                     </a>
-                                 </li>
+                                 </li> --}}
                                  <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
                                     <a href="{{ route('logout') }}" class="text-heading lh-1 sidebar-link">
                                        <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
