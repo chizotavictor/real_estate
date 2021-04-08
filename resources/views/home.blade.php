@@ -6,6 +6,7 @@
          <div class="mr-0 mr-md-auto">
             <h2 class="mb-0 text-heading fs-22 lh-15">Welcome back, {{Auth::user()->name}}!</h2>
          </div>
+         @if(Auth::user()->is_admin)
          <div>
             <a href="{{ route('property.add') }}" class="btn btn-primary btn-lg">
                <span>Add New Property</span>
@@ -16,6 +17,7 @@
                </span>
             </a>
          </div>
+         @endif
       </div>
       <div class="row">
          <div class="col-sm-6 col-xxl-3 mb-6">

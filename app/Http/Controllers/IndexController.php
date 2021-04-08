@@ -18,7 +18,7 @@ class IndexController extends Controller
 
     public function buy(Request $request)
     {       
-        $properties = Property::where(['purpose' => 'SELL', 'status' => 'Approved'])
+        $properties = Property::where(['purpose' => 'SALE', 'status' => 'Approved'])
             ->paginate(15);    
         return view('buy')->with(['properties' => $properties, 'count' => sizeof($properties)]);
     }

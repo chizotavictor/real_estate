@@ -34,13 +34,13 @@
                     <td class="align-middle pt-6 pb-4 px-6">
                        <div class="media">
                           <div class="w-120px mr-4 position-relative">
-                             <a href="{{route('property', ['index' => $p->id])}}">
+                             <a href="{{route('description', ['id' => $p->id])}}" target="_blank">
                              <img src="{{asset('public/uploads/'.$p->image_1)}}">
                              </a>
                              <span class="badge badge-indigo position-absolute pos-fixed-top">{{$p->purpose}}</span>
                           </div>
                           <div class="media-body">
-                             <a href="single-property-1.html" class="text-dark hover-primary">
+                             <a href="{{route('description', ['id' => $p->id])}}" target="_blank" class="text-dark hover-primary">
                                 <h5 class="fs-16 mb-0 lh-18">{{$p->name}}</h5>
                              </a>
                              <p class="mb-1 font-weight-500">{{$p->address}}, {{$p->city}}, {{$p->country}}</p>

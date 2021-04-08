@@ -30,5 +30,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/properties', 'PropertyController@index')->name('property');
     Route::get('/properties/add', 'PropertyController@add')->name('property.add');
     Route::post('/properties/add', 'PropertyController@addSubmit')->name('property.add');
+    
+    Route::get('/purchase-plan', 'InvestmentController@purchasePlanForm')->name('purchase-plan');
 });
 
