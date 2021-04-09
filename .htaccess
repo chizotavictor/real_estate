@@ -7,7 +7,7 @@
     RewriteCond %{HTTPS} !=on
 
     # Redirect Trailing Slashes...
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteRule ^ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     RewriteRule ^(.*)/$ /$1 [L,R=301]
     
 

@@ -19,6 +19,7 @@
          </div>
          @endif
       </div>
+      <h5 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Real Estate</h5>
       <div class="row">
          <div class="col-sm-6 col-xxl-3 mb-6">
             <div class="card">
@@ -89,7 +90,94 @@
             </div>
          </div>
       </div>
-       
+      <h5 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Investment</h5>
+      <div class="row">
+         <div class="col-sm-6 col-xxl-3 mb-6">
+            <div class="card">
+               <div class="card-body row align-items-center px-6 py-7">
+                  <div class="col-5">
+                     <span class="w-83px h-83 d-flex align-items-center justify-content-center fs-36 badge badge-blue badge-circle">
+                        <svg class="icon icon-1">
+                           <use xlink:href="#icon-1"></use>
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="col-7 text-center">
+                     <p class="fs-42 lh-12 mb-0">${{$income}}</p>
+                     <p>Profit Balance</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-xxl-3 mb-6">
+            <div class="card">
+               <div class="card-body row align-items-center px-6 py-7">
+                  <div class="col-5">
+                     <span class="w-83px h-83 d-flex align-items-center justify-content-center fs-36 badge badge-green badge-circle">
+                        <svg class="icon icon-2">
+                           <use xlink:href="#icon-1"></use>
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="col-7 text-center">
+                     <p class="fs-42 lh-12 mb-0">${{$current_investment}}</p>
+                     <p>Active Investment</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-xxl-3 mb-6">
+            <div class="card">
+               <div class="card-body row align-items-center px-6 py-7">
+                  <div class="col-4">
+                     <span class="w-83px h-83 d-flex align-items-center justify-content-center fs-36 badge badge-yellow badge-circle">
+                        <svg class="icon icon-review">
+                           <use xlink:href="#icon-1"></use>
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="col-8 text-center">
+                     <p class="fs-42 lh-12 mb-0">${{$total_investment}}</p>
+                     <p>Total Investment</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-xxl-3 mb-6">
+            <div class="card">
+               <div class="card-body row align-items-center px-6 py-7">
+                  <div class="col-5">
+                     <span class="w-83px h-83 d-flex align-items-center justify-content-center fs-36 badge badge-pink badge-circle">
+                        <svg class="icon icon-heart">
+                           <use xlink:href="#icon-heart"></use>
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="col-7 text-center">
+                     <p class="fs-42 lh-12 mb-0">${{$pending_investment}}</p>
+                     <p>Pending Investment</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-xxl-3 mb-6">
+            <div class="card">
+               <div class="card-body row align-items-center px-6 py-7">
+                  <div class="col-5">
+                     <span class="w-83px h-83 d-flex align-items-center justify-content-center fs-36 badge badge-pink badge-circle">
+                        <svg class="icon icon-heart">
+                           <use xlink:href="#icon-heart"></use>
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="col-7 text-center">
+                     <p class="fs-42 lh-12 mb-0">${{$total_withdrawal}}</p>
+                     <p>Total Withdrawal</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
 </main>
 @endsection

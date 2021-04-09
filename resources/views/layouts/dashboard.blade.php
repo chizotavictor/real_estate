@@ -93,7 +93,7 @@
                            <li class="list-group-item pt-6 pb-4">
                               <h5 class="fs-13 letter-spacing-087 text-muted mb-3 text-uppercase px-3">Manage Listings</h5>
                               <ul class="list-group list-group-no-border rounded-lg">
-                                   @if(Auth::user()->is_admin == "1")
+                               @if(Auth::user()->is_admin == "1")
                                  <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
                                     <a href="{{ route('property.add') }}" class="text-heading lh-1 sidebar-link">
                                        <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20 fs-20">
@@ -145,8 +145,41 @@
                            <li class="list-group-item pt-6 pb-4">
                               <h5 class="fs-13 letter-spacing-087 text-muted mb-3 text-uppercase px-3">Investment</h5>
                               <ul class="list-group list-group-no-border rounded-lg">
+                                 @if(Auth::user()->is_admin)
                                  <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
-                                    <a href="#" class="text-heading lh-1 sidebar-link d-flex align-items-center">
+                                    <a href="{{ route('admin-deposits') }}" class="text-heading lh-1 sidebar-link d-flex align-items-center">
+                                       <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
+                                          <svg class="icon icon-my-package">
+                                             <use xlink:href="#icon-my-package"></use>
+                                          </svg>
+                                       </span>
+                                       <span class="sidebar-item-text">User Deposits</span>
+                                    </a>
+                                 </li>
+                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="{{ route('admin-users') }}" class="text-heading lh-1 sidebar-link d-flex align-items-center">
+                                       <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
+                                          <svg class="icon icon-my-package">
+                                             <use xlink:href="#icon-my-package"></use>
+                                          </svg>
+                                       </span>
+                                       <span class="sidebar-item-text">Users</span>
+                                    </a>
+                                 </li>
+                                  <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="{{ route('admin-withdrawal-request') }}" class="text-heading lh-1 sidebar-link d-flex align-items-center">
+                                       <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
+                                          <svg class="icon icon-my-package">
+                                             <use xlink:href="#icon-my-package"></use>
+                                          </svg>
+                                       </span>
+                                       <span class="sidebar-item-text">Withdrawal Requests</span>
+                                    </a>
+                                 </li>
+                                 
+                                 @else
+                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="{{ route('deposits') }}" class="text-heading lh-1 sidebar-link d-flex align-items-center">
                                        <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
                                           <svg class="icon icon-my-package">
                                              <use xlink:href="#icon-my-package"></use>
@@ -155,8 +188,18 @@
                                        <span class="sidebar-item-text">Purchase Plan</span>
                                     </a>
                                  </li>
+                                 <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
+                                    <a href="{{ route('transactions') }}" class="text-heading lh-1 sidebar-link d-flex align-items-center">
+                                       <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
+                                          <svg class="icon icon-my-package">
+                                             <use xlink:href="#icon-my-package"></use>
+                                          </svg>
+                                       </span>
+                                       <span class="sidebar-item-text">Transactions</span>
+                                    </a>
+                                 </li>
                                   <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
-                                    <a href="#" class="text-heading lh-1 sidebar-link d-flex align-items-center">
+                                    <a href="{{ route('income') }}" class="text-heading lh-1 sidebar-link d-flex align-items-center">
                                        <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
                                           <svg class="icon icon-my-package">
                                              <use xlink:href="#icon-my-package"></use>
@@ -166,7 +209,7 @@
                                     </a>
                                  </li>
                                  <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
-                                    <a href="#" class="text-heading lh-1 sidebar-link d-flex align-items-center">
+                                    <a href="{{route('withdrawal')}}" class="text-heading lh-1 sidebar-link d-flex align-items-center">
                                        <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
                                           <svg class="icon icon-my-package">
                                              <use xlink:href="#icon-my-package"></use>
@@ -175,6 +218,7 @@
                                        <span class="sidebar-item-text">Withdrawals</span>
                                     </a>
                                  </li>
+                                 @endif
                               </ul>
                             </li>
                            <li class="list-group-item pt-6 pb-4">
@@ -182,7 +226,7 @@
                               <ul class="list-group list-group-no-border rounded-lg">
                                  
                                  <li class="list-group-item px-3 px-xl-4 py-2 sidebar-item">
-                                    <a href="#" class="text-heading lh-1 sidebar-link">
+                                    <a href="{{ route('profile') }}" class="text-heading lh-1 sidebar-link">
                                        <span class="sidebar-item-icon d-inline-block mr-3 text-muted fs-20">
                                           <svg class="icon icon-my-profile">
                                              <use xlink:href="#icon-my-profile"></use>
@@ -226,7 +270,7 @@
                                  </div>
                               </a>
                               <div class="dropdown-menu dropdown-menu-right w-100">
-                                 <a class="dropdown-item" href="#">My Profile</a>
+                                 <a class="dropdown-item" href="{{ route('profile') }}">My Profile</a>
                                  <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
                               </div>
                            </div>
